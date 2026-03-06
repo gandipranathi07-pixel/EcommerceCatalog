@@ -10,12 +10,12 @@ mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.log(err));
 
-// HOME ROUTE (IMPORTANT FOR RENDER)
+// HOME ROUTE
 app.get("/", (req, res) => {
   res.send("Ecommerce Catalog API is Running Successfully 🚀");
 });
 
-// Sample products route
+// PRODUCTS ROUTE
 app.get("/products", (req, res) => {
   res.json([
     {
